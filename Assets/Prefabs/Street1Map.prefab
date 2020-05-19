@@ -1,5 +1,62 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1256948011
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1256948012}
+  - component: {fileID: 1256948013}
+  m_Layer: 0
+  m_Name: Wall
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1256948012
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1256948011}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 30.52, y: -3.94, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8485687995808144047}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1256948013
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1256948011}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &8485687994070642340
 GameObject:
   m_ObjectHideFlags: 0
@@ -115,7 +172,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8485687994178150195}
   - component: {fileID: 8485687994178150221}
-  - component: {fileID: 8485687994178150194}
   m_Layer: 0
   m_Name: house_type1_0
   m_TagString: Untagged
@@ -190,24 +246,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8485687994178150194
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8485687994178150192}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4695037a2aece46e6bbdf2cbb78dc2da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _pc2D: {fileID: 0}
-  IsAMovingObject: 0
-  IsAChildSprite: 0
-  LocalPosition: {x: 0, y: 0}
-  SpriteScale: 1
-  _initialScale: {x: 1, y: 1, z: 1}
 --- !u!1 &8485687994202978675
 GameObject:
   m_ObjectHideFlags: 0
@@ -374,7 +412,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8485687995542977788}
   - component: {fileID: 8485687994293114752}
-  - component: {fileID: 8485687994293114753}
   m_Layer: 0
   m_Name: streetlight (4)
   m_TagString: Untagged
@@ -390,7 +427,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8485687994293114758}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -29, y: -0.6666667, z: 0}
+  m_LocalPosition: {x: -29, y: -0.6875, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8485687996070869335}
@@ -448,24 +485,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8485687994293114753
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8485687994293114758}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4695037a2aece46e6bbdf2cbb78dc2da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _pc2D: {fileID: 0}
-  IsAMovingObject: 0
-  IsAChildSprite: 0
-  LocalPosition: {x: 0, y: 0}
-  SpriteScale: 1
-  _initialScale: {x: 1, y: 1, z: 1}
 --- !u!1 &8485687994303934794
 GameObject:
   m_ObjectHideFlags: 0
@@ -476,7 +495,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8485687994303934789}
   - component: {fileID: 8485687994303934791}
-  - component: {fileID: 8485687994303934788}
   m_Layer: 0
   m_Name: walkway
   m_TagString: Untagged
@@ -548,24 +566,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8485687994303934788
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8485687994303934794}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4695037a2aece46e6bbdf2cbb78dc2da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _pc2D: {fileID: 0}
-  IsAMovingObject: 0
-  IsAChildSprite: 0
-  LocalPosition: {x: 0, y: 0}
-  SpriteScale: 1
-  _initialScale: {x: 1, y: 1, z: 1}
 --- !u!1 &8485687994324981286
 GameObject:
   m_ObjectHideFlags: 0
@@ -694,7 +694,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8485687994362290716}
   - component: {fileID: 8485687994362290717}
-  - component: {fileID: 8485687994362290719}
   m_Layer: 8
   m_Name: city_bg
   m_TagString: Untagged
@@ -766,24 +765,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8485687994362290719
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8485687994362290690}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4695037a2aece46e6bbdf2cbb78dc2da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _pc2D: {fileID: 0}
-  IsAMovingObject: 0
-  IsAChildSprite: 0
-  LocalPosition: {x: 0, y: 0}
-  SpriteScale: 1
-  _initialScale: {x: 1, y: 1, z: 1}
 --- !u!1 &8485687994379523380
 GameObject:
   m_ObjectHideFlags: 0
@@ -1080,7 +1061,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8485687994437987398}
   - component: {fileID: 8485687994437987392}
-  - component: {fileID: 8485687994437987393}
   m_Layer: 0
   m_Name: house_type2_1 (1)
   m_TagString: Untagged
@@ -1154,24 +1134,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8485687994437987393
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8485687994437987399}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4695037a2aece46e6bbdf2cbb78dc2da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _pc2D: {fileID: 0}
-  IsAMovingObject: 0
-  IsAChildSprite: 0
-  LocalPosition: {x: 0, y: 0}
-  SpriteScale: 1
-  _initialScale: {x: 1, y: 1, z: 1}
 --- !u!1 &8485687994440552874
 GameObject:
   m_ObjectHideFlags: 0
@@ -1299,7 +1261,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8485687994456818412}
   - component: {fileID: 8485687994456818414}
-  - component: {fileID: 8485687994456818415}
   m_Layer: 0
   m_Name: walkway
   m_TagString: Untagged
@@ -1371,24 +1332,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8485687994456818415
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8485687994456818413}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4695037a2aece46e6bbdf2cbb78dc2da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _pc2D: {fileID: 0}
-  IsAMovingObject: 0
-  IsAChildSprite: 0
-  LocalPosition: {x: 0, y: 0}
-  SpriteScale: 1
-  _initialScale: {x: 1, y: 1, z: 1}
 --- !u!1 &8485687994502754465
 GameObject:
   m_ObjectHideFlags: 0
@@ -1434,7 +1377,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8485687994505494248}
   - component: {fileID: 8485687994505494251}
-  - component: {fileID: 8485687994505494250}
   m_Layer: 0
   m_Name: walkway
   m_TagString: Untagged
@@ -1506,24 +1448,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8485687994505494250
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8485687994505494249}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4695037a2aece46e6bbdf2cbb78dc2da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _pc2D: {fileID: 0}
-  IsAMovingObject: 0
-  IsAChildSprite: 0
-  LocalPosition: {x: 0, y: 0}
-  SpriteScale: 1
-  _initialScale: {x: 1, y: 1, z: 1}
 --- !u!1 &8485687994514696843
 GameObject:
   m_ObjectHideFlags: 0
@@ -1534,7 +1458,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8485687994514696842}
   - component: {fileID: 8485687994514696836}
-  - component: {fileID: 8485687994514696837}
   m_Layer: 0
   m_Name: walkway
   m_TagString: Untagged
@@ -1606,24 +1529,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8485687994514696837
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8485687994514696843}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4695037a2aece46e6bbdf2cbb78dc2da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _pc2D: {fileID: 0}
-  IsAMovingObject: 0
-  IsAChildSprite: 0
-  LocalPosition: {x: 0, y: 0}
-  SpriteScale: 1
-  _initialScale: {x: 1, y: 1, z: 1}
 --- !u!1 &8485687994531342421
 GameObject:
   m_ObjectHideFlags: 0
@@ -1706,7 +1611,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8485687996163609295}
   - component: {fileID: 8485687994539740952}
-  - component: {fileID: 8485687994539740953}
   m_Layer: 0
   m_Name: streetlight
   m_TagString: Untagged
@@ -1722,7 +1626,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8485687994539740958}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 13, y: -0.6666667, z: 0}
+  m_LocalPosition: {x: 13, y: -0.6875, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8485687994244516215}
@@ -1780,24 +1684,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8485687994539740953
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8485687994539740958}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4695037a2aece46e6bbdf2cbb78dc2da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _pc2D: {fileID: 0}
-  IsAMovingObject: 0
-  IsAChildSprite: 0
-  LocalPosition: {x: 0, y: 0}
-  SpriteScale: 1
-  _initialScale: {x: 1, y: 1, z: 1}
 --- !u!1 &8485687994545012254
 GameObject:
   m_ObjectHideFlags: 0
@@ -1892,7 +1778,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8485687994571792341}
   - component: {fileID: 8485687994571792346}
-  - component: {fileID: 8485687994571792340}
   m_Layer: 8
   m_Name: grass_bg
   m_TagString: Untagged
@@ -1964,24 +1849,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8485687994571792340
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8485687994571792347}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4695037a2aece46e6bbdf2cbb78dc2da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _pc2D: {fileID: 0}
-  IsAMovingObject: 0
-  IsAChildSprite: 0
-  LocalPosition: {x: 0, y: 0}
-  SpriteScale: 1
-  _initialScale: {x: 1, y: 1, z: 1}
 --- !u!1 &8485687994583776694
 GameObject:
   m_ObjectHideFlags: 0
@@ -1992,7 +1859,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8485687994941889157}
   - component: {fileID: 8485687994583776688}
-  - component: {fileID: 8485687994583776689}
   m_Layer: 0
   m_Name: streetlight (3)
   m_TagString: Untagged
@@ -2008,7 +1874,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8485687994583776694}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -15, y: -0.6666667, z: 0}
+  m_LocalPosition: {x: -15, y: -0.6875, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8485687994108977042}
@@ -2066,24 +1932,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8485687994583776689
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8485687994583776694}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4695037a2aece46e6bbdf2cbb78dc2da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _pc2D: {fileID: 0}
-  IsAMovingObject: 0
-  IsAChildSprite: 0
-  LocalPosition: {x: 0, y: 0}
-  SpriteScale: 1
-  _initialScale: {x: 1, y: 1, z: 1}
 --- !u!1 &8485687994627193174
 GameObject:
   m_ObjectHideFlags: 0
@@ -2464,7 +2312,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8485687994684125605}
   - component: {fileID: 8485687994684125610}
-  - component: {fileID: 8485687994684125604}
   m_Layer: 9
   m_Name: house_type2_0
   m_TagString: Untagged
@@ -2539,24 +2386,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8485687994684125604
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8485687994684125611}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4695037a2aece46e6bbdf2cbb78dc2da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _pc2D: {fileID: 0}
-  IsAMovingObject: 0
-  IsAChildSprite: 0
-  LocalPosition: {x: 0, y: 0}
-  SpriteScale: 1
-  _initialScale: {x: 1, y: 1, z: 1}
 --- !u!1 &8485687994691066167
 GameObject:
   m_ObjectHideFlags: 0
@@ -2685,7 +2514,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8485687994717486178}
   - component: {fileID: 8485687994717486205}
-  - component: {fileID: 8485687994717486204}
   m_Layer: 0
   m_Name: walkway
   m_TagString: Untagged
@@ -2757,24 +2585,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8485687994717486204
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8485687994717486179}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4695037a2aece46e6bbdf2cbb78dc2da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _pc2D: {fileID: 0}
-  IsAMovingObject: 0
-  IsAChildSprite: 0
-  LocalPosition: {x: 0, y: 0}
-  SpriteScale: 1
-  _initialScale: {x: 1, y: 1, z: 1}
 --- !u!1 &8485687994722124348
 GameObject:
   m_ObjectHideFlags: 0
@@ -2976,7 +2786,6 @@ GameObject:
   - component: {fileID: 8485687994814771290}
   - component: {fileID: 8485687994814771285}
   - component: {fileID: 8485687994814771284}
-  - component: {fileID: 8485687994814771287}
   m_Layer: 9
   m_Name: street_tex (1)
   m_TagString: Untagged
@@ -3074,24 +2883,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 20, y: 1.2011576}
   m_EdgeRadius: 0
---- !u!114 &8485687994814771287
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8485687994814771291}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4695037a2aece46e6bbdf2cbb78dc2da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _pc2D: {fileID: 0}
-  IsAMovingObject: 0
-  IsAChildSprite: 0
-  LocalPosition: {x: 0, y: 0}
-  SpriteScale: 1
-  _initialScale: {x: 1, y: 1, z: 1}
 --- !u!1 &8485687994850891854
 GameObject:
   m_ObjectHideFlags: 0
@@ -3102,7 +2893,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8485687994850891849}
   - component: {fileID: 8485687994850891851}
-  - component: {fileID: 8485687994850891848}
   m_Layer: 0
   m_Name: house_type1_2
   m_TagString: Untagged
@@ -3177,24 +2967,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8485687994850891848
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8485687994850891854}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4695037a2aece46e6bbdf2cbb78dc2da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _pc2D: {fileID: 0}
-  IsAMovingObject: 0
-  IsAChildSprite: 0
-  LocalPosition: {x: 0, y: 0}
-  SpriteScale: 1
-  _initialScale: {x: 1, y: 1, z: 1}
 --- !u!1 &8485687994851019632
 GameObject:
   m_ObjectHideFlags: 0
@@ -3239,7 +3011,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8485687994885050676}
   - component: {fileID: 8485687994885050679}
-  - component: {fileID: 8485687994885050678}
   m_Layer: 0
   m_Name: walkway
   m_TagString: Untagged
@@ -3311,24 +3082,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8485687994885050678
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8485687994885050677}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4695037a2aece46e6bbdf2cbb78dc2da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _pc2D: {fileID: 0}
-  IsAMovingObject: 0
-  IsAChildSprite: 0
-  LocalPosition: {x: 0, y: 0}
-  SpriteScale: 1
-  _initialScale: {x: 1, y: 1, z: 1}
 --- !u!1 &8485687994936381009
 GameObject:
   m_ObjectHideFlags: 0
@@ -3412,7 +3165,6 @@ GameObject:
   - component: {fileID: 8485687994974572576}
   - component: {fileID: 8485687994974572579}
   - component: {fileID: 8485687994974572578}
-  - component: {fileID: 8485687994974572605}
   m_Layer: 9
   m_Name: street_tex
   m_TagString: Untagged
@@ -3510,24 +3262,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 20, y: 1.2011576}
   m_EdgeRadius: 0
---- !u!114 &8485687994974572605
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8485687994974572577}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4695037a2aece46e6bbdf2cbb78dc2da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _pc2D: {fileID: 0}
-  IsAMovingObject: 0
-  IsAChildSprite: 0
-  LocalPosition: {x: 0, y: 0}
-  SpriteScale: 1
-  _initialScale: {x: 1, y: 1, z: 1}
 --- !u!1 &8485687995005163234
 GameObject:
   m_ObjectHideFlags: 0
@@ -4009,7 +3743,6 @@ GameObject:
   - component: {fileID: 8485687995227350681}
   - component: {fileID: 8485687995227350680}
   - component: {fileID: 8485687995227350683}
-  - component: {fileID: 8485687995227350682}
   m_Layer: 9
   m_Name: street_tex (2)
   m_TagString: Untagged
@@ -4107,24 +3840,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 20, y: 1.2011576}
   m_EdgeRadius: 0
---- !u!114 &8485687995227350682
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8485687995227350686}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4695037a2aece46e6bbdf2cbb78dc2da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _pc2D: {fileID: 0}
-  IsAMovingObject: 0
-  IsAChildSprite: 0
-  LocalPosition: {x: 0, y: 0}
-  SpriteScale: 1
-  _initialScale: {x: 1, y: 1, z: 1}
 --- !u!1 &8485687995254220995
 GameObject:
   m_ObjectHideFlags: 0
@@ -4291,7 +4006,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8485687994537651950}
   - component: {fileID: 8485687995319417153}
-  - component: {fileID: 8485687995319417158}
   m_Layer: 0
   m_Name: streetlight (2)
   m_TagString: Untagged
@@ -4307,7 +4021,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8485687995319417159}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1, y: -0.6666667, z: 0}
+  m_LocalPosition: {x: -1, y: -0.6875, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8485687995350714814}
@@ -4365,24 +4079,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8485687995319417158
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8485687995319417159}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4695037a2aece46e6bbdf2cbb78dc2da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _pc2D: {fileID: 0}
-  IsAMovingObject: 0
-  IsAChildSprite: 0
-  LocalPosition: {x: 0, y: 0}
-  SpriteScale: 1
-  _initialScale: {x: 1, y: 1, z: 1}
 --- !u!1 &8485687995326987942
 GameObject:
   m_ObjectHideFlags: 0
@@ -4393,7 +4089,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8485687995326987937}
   - component: {fileID: 8485687995326987939}
-  - component: {fileID: 8485687995326987936}
   m_Layer: 0
   m_Name: house_type2_0 (1)
   m_TagString: Untagged
@@ -4468,24 +4163,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8485687995326987936
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8485687995326987942}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4695037a2aece46e6bbdf2cbb78dc2da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _pc2D: {fileID: 0}
-  IsAMovingObject: 0
-  IsAChildSprite: 0
-  LocalPosition: {x: 0, y: 0}
-  SpriteScale: 1
-  _initialScale: {x: 1, y: 1, z: 1}
 --- !u!1 &8485687995350714815
 GameObject:
   m_ObjectHideFlags: 0
@@ -4676,7 +4353,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8485687995211000765}
   - component: {fileID: 8485687995494984963}
-  - component: {fileID: 8485687995494984960}
   m_Layer: 0
   m_Name: streetlight (1)
   m_TagString: Untagged
@@ -4692,7 +4368,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8485687995494984961}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 26.791668, y: -0.6666667, z: 0}
+  m_LocalPosition: {x: 26.8125, y: -0.6875, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8485687995122755993}
@@ -4750,24 +4426,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8485687995494984960
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8485687995494984961}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4695037a2aece46e6bbdf2cbb78dc2da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _pc2D: {fileID: 0}
-  IsAMovingObject: 0
-  IsAChildSprite: 0
-  LocalPosition: {x: 0, y: 0}
-  SpriteScale: 1
-  _initialScale: {x: 1, y: 1, z: 1}
 --- !u!1 &8485687995512148627
 GameObject:
   m_ObjectHideFlags: 0
@@ -4850,7 +4508,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8485687995578347947}
   - component: {fileID: 8485687995578347946}
-  - component: {fileID: 8485687995578347941}
   m_Layer: 8
   m_Name: city_bg (2)
   m_TagString: Untagged
@@ -4922,24 +4579,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8485687995578347941
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8485687995578347944}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4695037a2aece46e6bbdf2cbb78dc2da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _pc2D: {fileID: 0}
-  IsAMovingObject: 0
-  IsAChildSprite: 0
-  LocalPosition: {x: 0, y: 0}
-  SpriteScale: 1
-  _initialScale: {x: 1, y: 1, z: 1}
 --- !u!1 &8485687995585764562
 GameObject:
   m_ObjectHideFlags: 0
@@ -5067,7 +4706,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8485687995748277271}
   - component: {fileID: 8485687995748277265}
-  - component: {fileID: 8485687995748277270}
   m_Layer: 0
   m_Name: house_type2_2
   m_TagString: Untagged
@@ -5142,24 +4780,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8485687995748277270
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8485687995748277268}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4695037a2aece46e6bbdf2cbb78dc2da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _pc2D: {fileID: 0}
-  IsAMovingObject: 0
-  IsAChildSprite: 0
-  LocalPosition: {x: 0, y: 0}
-  SpriteScale: 1
-  _initialScale: {x: 1, y: 1, z: 1}
 --- !u!1 &8485687995762864509
 GameObject:
   m_ObjectHideFlags: 0
@@ -5425,6 +5045,7 @@ Transform:
   - {fileID: 8485687995998724650}
   - {fileID: 8485687994502754464}
   - {fileID: 8485687994531342423}
+  - {fileID: 1256948012}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5512,7 +5133,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8485687995863240153}
   - component: {fileID: 8485687995863240152}
-  - component: {fileID: 8485687995863240155}
   m_Layer: 8
   m_Name: city_bg (1)
   m_TagString: Untagged
@@ -5584,24 +5204,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8485687995863240155
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8485687995863240158}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4695037a2aece46e6bbdf2cbb78dc2da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _pc2D: {fileID: 0}
-  IsAMovingObject: 0
-  IsAChildSprite: 0
-  LocalPosition: {x: 0, y: 0}
-  SpriteScale: 1
-  _initialScale: {x: 1, y: 1, z: 1}
 --- !u!1 &8485687995884826852
 GameObject:
   m_ObjectHideFlags: 0
@@ -5612,7 +5214,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8485687995884826855}
   - component: {fileID: 8485687995884826854}
-  - component: {fileID: 8485687995884826849}
   m_Layer: 8
   m_Name: grass_bg (1)
   m_TagString: Untagged
@@ -5684,24 +5285,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8485687995884826849
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8485687995884826852}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4695037a2aece46e6bbdf2cbb78dc2da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _pc2D: {fileID: 0}
-  IsAMovingObject: 0
-  IsAChildSprite: 0
-  LocalPosition: {x: 0, y: 0}
-  SpriteScale: 1
-  _initialScale: {x: 1, y: 1, z: 1}
 --- !u!1 &8485687995905000770
 GameObject:
   m_ObjectHideFlags: 0
@@ -5786,7 +5369,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8485687995993409294}
   - component: {fileID: 8485687995993409289}
-  - component: {fileID: 8485687995993409288}
   m_Layer: 0
   m_Name: house_type2_1
   m_TagString: Untagged
@@ -5860,24 +5442,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8485687995993409288
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8485687995993409295}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4695037a2aece46e6bbdf2cbb78dc2da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _pc2D: {fileID: 0}
-  IsAMovingObject: 0
-  IsAChildSprite: 0
-  LocalPosition: {x: 0, y: 0}
-  SpriteScale: 1
-  _initialScale: {x: 1, y: 1, z: 1}
 --- !u!1 &8485687995998724651
 GameObject:
   m_ObjectHideFlags: 0
@@ -6081,7 +5645,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8485687996106945385}
   - component: {fileID: 8485687996106945387}
-  - component: {fileID: 8485687996106945384}
   m_Layer: 0
   m_Name: walkway
   m_TagString: Untagged
@@ -6153,24 +5716,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8485687996106945384
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8485687996106945390}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4695037a2aece46e6bbdf2cbb78dc2da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _pc2D: {fileID: 0}
-  IsAMovingObject: 0
-  IsAChildSprite: 0
-  LocalPosition: {x: 0, y: 0}
-  SpriteScale: 1
-  _initialScale: {x: 1, y: 1, z: 1}
 --- !u!1 &8485687996110810111
 GameObject:
   m_ObjectHideFlags: 0
@@ -6255,7 +5800,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8485687996168568836}
   - component: {fileID: 8485687996168568839}
-  - component: {fileID: 8485687996168568838}
   m_Layer: 8
   m_Name: grass_bg (2)
   m_TagString: Untagged
@@ -6327,24 +5871,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8485687996168568838
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8485687996168568837}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4695037a2aece46e6bbdf2cbb78dc2da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _pc2D: {fileID: 0}
-  IsAMovingObject: 0
-  IsAChildSprite: 0
-  LocalPosition: {x: 0, y: 0}
-  SpriteScale: 1
-  _initialScale: {x: 1, y: 1, z: 1}
 --- !u!1 &8485687996180157120
 GameObject:
   m_ObjectHideFlags: 0
