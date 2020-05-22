@@ -8,12 +8,10 @@ public class GetScaleFactor : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // 1080p - 6
-        // 720p - 4
-        // 1600x900 - 5 <- PROBLEM
         float scale = Screen.currentResolution.width / 320;
         if (scale % 2 != 0)
         {
+            Mathf.Floor(scale);
             scale++;
         }
         gameObject.GetComponent<CanvasScaler>().scaleFactor = scale;

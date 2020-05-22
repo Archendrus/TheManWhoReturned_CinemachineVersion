@@ -17,9 +17,9 @@ public class DialogueBox : MonoBehaviour
     void Update()
     {
         Vector3 newPos = Camera.main.WorldToScreenPoint(sprite.transform.position);
-        float x = Mathf.Ceil(newPos.x);
-        float y = Mathf.Ceil(newPos.y);
-        GetComponent<RectTransform>().position = new Vector3(x, y, 1);
-        //GetComponent<RectTransform>().position = Camera.main.WorldToScreenPoint(sprite.transform.position);
+        //float x = Mathf.Floor(newPos.x);
+        //float y = Mathf.Floor(newPos.y);
+        //GetComponent<RectTransform>().position = new Vector3(x, y, 1);
+        GetComponent<RectTransform>().position = new Vector3(newPos.x, newPos.y, 1);
     }
 }
