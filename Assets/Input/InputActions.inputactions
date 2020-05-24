@@ -7,7 +7,7 @@
             "actions": [
                 {
                     "name": "Move",
-                    "type": "PassThrough",
+                    "type": "Value",
                     "id": "dedff4e0-e844-459d-a225-32df3d89dff3",
                     "expectedControlType": "Vector2",
                     "processors": "",
@@ -17,6 +17,14 @@
                     "name": "Quit",
                     "type": "Button",
                     "id": "535e56fe-177f-453e-b8cd-4acfcf8abefa",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Interact",
+                    "type": "Button",
+                    "id": "317eb678-f2b2-4bbd-b1b5-718075d1b71a",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": ""
@@ -163,6 +171,28 @@
                     "processors": "",
                     "groups": "Keyboard;Gamepad",
                     "action": "Quit",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4fea0e7e-d2da-44fd-8f17-53155fe0bfba",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "60708f50-1099-4fc9-b191-155945ed9c4d",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Interact",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

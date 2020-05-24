@@ -4,22 +4,12 @@ using UnityEngine;
 
 public class DialogueBox : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject sprite;
+    [SerializeField] private GameObject DialoguePoint;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
-        Vector3 newPos = Camera.main.WorldToScreenPoint(sprite.transform.position);
-        //float x = Mathf.Floor(newPos.x);
-        //float y = Mathf.Floor(newPos.y);
-        //GetComponent<RectTransform>().position = new Vector3(x, y, 1);
+        // Attach DialogueBox to a sprite's DialoguePoint
+        Vector3 newPos = Camera.main.WorldToScreenPoint(DialoguePoint.transform.position);
         GetComponent<RectTransform>().position = new Vector3(newPos.x, newPos.y, 1);
     }
 }

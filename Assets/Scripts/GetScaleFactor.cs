@@ -5,9 +5,11 @@ using UnityEngine.UI;
 
 public class GetScaleFactor : MonoBehaviour
 {
-    // Start is called before the first frame update
     void Start()
     {
+        // Set CanvasScaler scale factor
+        // Calculate scale factor using native resolution
+        // Ensure always an even integer
         float scale = Screen.currentResolution.width / 320;
         if (scale % 2 != 0)
         {
@@ -15,11 +17,5 @@ public class GetScaleFactor : MonoBehaviour
             scale++;
         }
         gameObject.GetComponent<CanvasScaler>().scaleFactor = scale;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

@@ -5,10 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class SceneChange : MonoBehaviour
 {
-    [SerializeField]
-    private string newLevel;
-    [SerializeField]
-    private Animator transition;
+    [SerializeField] private string newLevel;
+    [SerializeField] private Animator transition;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
