@@ -8,7 +8,7 @@ public class Interactable : MonoBehaviour
     private bool triggered = false;
     private bool inRange = false;
 
-    public string Text;
+    public Dialogue Dialogue;
 
     // Update is called once per frame
     void Update()

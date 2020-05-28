@@ -2,19 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using TMPro;
+
 
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float speed = 5f;
     [SerializeField] private Canvas canvas;
-    [SerializeField] private GameObject DialogueTextObject;
+
+    public Animator animator;
+    public GameObject Interactable;
 
     private Rigidbody2D rb;
     private Vector2 moveDirection;
-    public Animator animator;
-    private bool canInteract = false;
-    private GameObject interactable;
 
     // Start is called before the first frame update
     void Start()
@@ -53,6 +52,7 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        // Allow move if no dialog
         if (!canvas.gameObject.activeInHierarchy)
         {
             Vector2 position = new Vector2(transform.position.x, transform.position.y);
@@ -70,40 +70,23 @@ public class PlayerController : MonoBehaviour
         Application.Quit();
     }
 
-    public void OnInteract(InputAction.CallbackContext ctx)
-    {
-        if (ctx.performed && interactable != null)
-        {
-            string text = interactable.GetComponent<Interactable>().Text;
-            TextMeshProUGUI DialogueText = DialogueTextObject.GetComponent<TextMeshProUGUI>();
-            if (!canvas.gameObject.activeInHierarchy)
-            {
-                DialogueText.text = text;
-                interactable.GetComponent<Interactable>().SetTriggered(true);
-                canvas.gameObject.SetActive(true);
-            }
-            else
-            {
-                DialogueText.text = "";
-                interactable.GetComponent<Interactable>().SetTriggered(false);
-                canvas.gameObject.SetActive(false);
-            }
-        }
-    }
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        // set GameObject interactable on collision
         if (collision.CompareTag("Interactable"))
         {
-            interactable = collision.gameObject;
+            Interactable = collision.gameObject;
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
+        // Clear GameObject interactable on exit collision
         if (collision.CompareTag("Interactable"))
         {
-            interactable = null;
+            Interactable = null;
         }
     }
 }
