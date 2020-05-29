@@ -13,8 +13,13 @@ MonoBehaviour:
   m_Name: StreetLight
   m_EditorClassIdentifier: 
   Lines:
-  - It's just a streetlight.
+  - 'It''s just a streetlight. '
   - This is another line.
   - 'Let''s try three lines
 
     on two lines.'
+  - "This is a long line. This is a long line. \nThis is a long line. This is a long
+    line. \nThis is a long line.  Some more."
+  - 'Some text on the first line.
+
+    More.'

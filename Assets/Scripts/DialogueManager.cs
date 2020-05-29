@@ -2,17 +2,47 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Users;
+using UnityEngine.UI;
 using TMPro;
 
 public class DialogueManager : MonoBehaviour
 {
     private int currentLine;
+
     [SerializeField] private TextMeshProUGUI dialogueText;
     [SerializeField] private float typeSpeed;
     [SerializeField] private PlayerController player;
+    [SerializeField] private PlayerInput playerInput;
+    [SerializeField] private Image advanceIcon;
+    [SerializeField] private Sprite gamepadButtonSprite;
+    [SerializeField] private Sprite keyboardButtonSprite;
+
+    public void OnEnable()
+    {
+        // Set sprites to use for advance icon based on current input device
+        // Add listener to get device change events
+        SetControlScheme(playerInput.currentControlScheme);
+        InputUser.onChange += onInputDeviceChange;
+    }
+
+    public void OnDisable()
+    {
+        InputUser.onChange -= onInputDeviceChange;
+    }
+
+    public void onInputDeviceChange(InputUser user, InputUserChange change, InputDevice device)
+    {
+        // user changed devices, set new sprite for advance icon
+        if (change == InputUserChange.ControlSchemeChanged)
+        {
+            SetControlScheme(playerInput.currentControlScheme);
+        }
+    }
 
     public void OnInteract(InputAction.CallbackContext ctx)
     {
+        // Interact button press and player has something to interact with
         if (ctx.performed && player.Interactable != null)
         {
             List<string> dialogueLines = player.Interactable.GetComponent<Interactable>().Dialogue.Lines;
@@ -50,12 +80,31 @@ public class DialogueManager : MonoBehaviour
 
     private IEnumerator TypeOneLine(string line)
     {
-        // TODO: Fix this. Garbage in first line when re-trigger same interactable
+        // Hide advance icon, clear previous text
+        advanceIcon.enabled = false;
         dialogueText.text = "";
+
+        // Type each character in line
         foreach (char ch in line)
         {
             dialogueText.text += ch;
             yield return new WaitForSeconds(typeSpeed);
+        }
+
+        // Line fully type, show advance icon
+        advanceIcon.enabled = true;
+    }
+
+    private void SetControlScheme(string scheme)
+    {
+        switch (scheme)
+        {
+            case "Keyboard":
+                advanceIcon.sprite = keyboardButtonSprite;
+                break;
+            case "Gamepad":
+                advanceIcon.sprite = gamepadButtonSprite;
+                break;
         }
     }
 }
