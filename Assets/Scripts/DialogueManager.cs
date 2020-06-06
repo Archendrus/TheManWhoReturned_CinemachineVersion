@@ -22,22 +22,13 @@ public class DialogueManager : MonoBehaviour
     {
         // Set sprites to use for advance icon based on current input device
         // Add listener to get device change events
-        SetControlScheme(playerInput.currentControlScheme);
+        SetIconsForCurrentControlScheme(playerInput.currentControlScheme);
         InputUser.onChange += onInputDeviceChange;
     }
 
     public void OnDisable()
     {
         InputUser.onChange -= onInputDeviceChange;
-    }
-
-    public void onInputDeviceChange(InputUser user, InputUserChange change, InputDevice device)
-    {
-        // user changed devices, set new sprite for advance icon
-        if (change == InputUserChange.ControlSchemeChanged)
-        {
-            SetControlScheme(playerInput.currentControlScheme);
-        }
     }
 
     public void OnInteract(InputAction.CallbackContext ctx)
@@ -95,7 +86,16 @@ public class DialogueManager : MonoBehaviour
         advanceIcon.enabled = true;
     }
 
-    private void SetControlScheme(string scheme)
+    public void onInputDeviceChange(InputUser user, InputUserChange change, InputDevice device)
+    {
+        // user changed devices, set new sprite for advance icon
+        if (change == InputUserChange.ControlSchemeChanged)
+        {
+            SetIconsForCurrentControlScheme(playerInput.currentControlScheme);
+        }
+    }
+
+    private void SetIconsForCurrentControlScheme(string scheme)
     {
         switch (scheme)
         {

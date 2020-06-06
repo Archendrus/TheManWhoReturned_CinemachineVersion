@@ -6197,41 +6197,11 @@ PrefabInstance:
       propertyPath: canvas
       value: 
       objectReference: {fileID: 1345793464}
-    - target: {fileID: 3391102567917555925, guid: 4955f2eb206f3dd4aa68a273b19f01e3,
-        type: 3}
-      propertyPath: DialogueTextObject
-      value: 
-      objectReference: {fileID: 1485230261}
-    - target: {fileID: 3391102567917555925, guid: 4955f2eb206f3dd4aa68a273b19f01e3,
-        type: 3}
-      propertyPath: dialogueText
-      value: 
-      objectReference: {fileID: 1485230263}
-    - target: {fileID: 3391102567917555925, guid: 4955f2eb206f3dd4aa68a273b19f01e3,
-        type: 3}
-      propertyPath: typeSpeed
-      value: 0.04
-      objectReference: {fileID: 0}
     - target: {fileID: 3391102567917555926, guid: 4955f2eb206f3dd4aa68a273b19f01e3,
         type: 3}
       propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1496758082}
-    - target: {fileID: 3391102567917555926, guid: 4955f2eb206f3dd4aa68a273b19f01e3,
-        type: 3}
-      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnInteract
-      objectReference: {fileID: 0}
-    - target: {fileID: 3391102567917555926, guid: 4955f2eb206f3dd4aa68a273b19f01e3,
-        type: 3}
-      propertyPath: m_NeverAutoSwitchControlSchemes
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3391102567917555926, guid: 4955f2eb206f3dd4aa68a273b19f01e3,
-        type: 3}
-      propertyPath: m_DefaultControlScheme
-      value: Keyboard
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4955f2eb206f3dd4aa68a273b19f01e3, type: 3}
 --- !u!1001 &5558801428519187423
@@ -6359,6 +6329,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 310d4ea83d6690f4c9be97257e87b6aa,
         type: 2}
+    - target: {fileID: 8915435448447143468, guid: 44f9f87e4ce0a4a4d860bb32f2b08080,
+        type: 3}
+      propertyPath: playerInput
+      value: 
+      objectReference: {fileID: 1583179584}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44f9f87e4ce0a4a4d860bb32f2b08080, type: 3}
 --- !u!1001 &7245507777890272170
