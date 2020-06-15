@@ -53,7 +53,8 @@ MonoBehaviour:
     type: 3}
   keyboardButtonSprite: {fileID: 4466523897078045299, guid: 8e74ad407501fe94f8ddc10c2c407e60,
     type: 3}
-  Dialogue: {fileID: 0}
+  Dialogue: {fileID: 5822292636092177388, guid: 29ee5f4c56712eb45964a6f6eb8b7e67,
+    type: 3}
 --- !u!58 &3065505712771550455
 CircleCollider2D:
   m_ObjectHideFlags: 0

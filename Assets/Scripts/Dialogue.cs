@@ -2,9 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New Dialogue", menuName = "Dialogue")]
-public class Dialogue : ScriptableObject
+public class Dialogue : MonoBehaviour
 {
-    [TextArea(2,5)]
-    public List<string> Lines;
+    [System.Serializable]
+    public struct Line
+    {
+        public GameObject CharacterDialoguePoint;
+
+        [TextArea(2, 5)]
+        public string Text;
+    }
+
+    public List<Line> Lines;
 }

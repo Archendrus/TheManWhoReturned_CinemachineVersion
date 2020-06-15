@@ -11,6 +11,7 @@ public class DialogueManager : MonoBehaviour
     private int currentLine;
 
     [SerializeField] private TextMeshProUGUI dialogueText;
+    [SerializeField] private DialogueBox dialogueBox;
     [SerializeField] private float typeSpeed;
     [SerializeField] private PlayerController player;
     [SerializeField] private PlayerInput playerInput;
@@ -36,7 +37,7 @@ public class DialogueManager : MonoBehaviour
         // Interact button press and player has something to interact with
         if (ctx.performed && player.Interactable != null)
         {
-            List<string> dialogueLines = player.Interactable.GetComponent<Interactable>().Dialogue.Lines;
+            List<Dialogue.Line> dialogueLines = player.Interactable.GetComponent<Interactable>().Dialogue.Lines;
 
             // Canvas not on, show canvas, reset line position
             // hide interactable icon
@@ -45,21 +46,25 @@ public class DialogueManager : MonoBehaviour
                 currentLine = 0;
                 player.Interactable.GetComponent<Interactable>().SetTriggered(true);
                 transform.gameObject.SetActive(true);
-                StartCoroutine(TypeOneLine(dialogueLines[currentLine]));
+
+                dialogueBox.SetDialoguePoint(dialogueLines[currentLine].CharacterDialoguePoint);
+
+                StartCoroutine(TypeOneLine(dialogueLines[currentLine].Text));
             }
             // Canvas on, increment line position if more lines
             else if (currentLine < dialogueLines.Count - 1)
             {
-                if (dialogueText.text == dialogueLines[currentLine])
+                if (dialogueText.text == dialogueLines[currentLine].Text)
                 {
                     currentLine++;
-                    StartCoroutine(TypeOneLine(dialogueLines[currentLine]));
+                    dialogueBox.SetDialoguePoint(dialogueLines[currentLine].CharacterDialoguePoint);
+                    StartCoroutine(TypeOneLine(dialogueLines[currentLine].Text));
                 }
 
             }
             else // Canvas on and no lines left, hide canvas, show interactable icon
             {
-                if (dialogueText.text == dialogueLines[currentLine])
+                if (dialogueText.text == dialogueLines[currentLine].Text)
                 {
                     dialogueText.text = "";
                     player.Interactable.GetComponent<Interactable>().SetTriggered(false);
