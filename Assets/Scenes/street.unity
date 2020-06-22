@@ -522,6 +522,16 @@ PrefabInstance:
       propertyPath: Dialogue
       value: 
       objectReference: {fileID: 1512733629}
+    - target: {fileID: 8915435448447143468, guid: 44f9f87e4ce0a4a4d860bb32f2b08080,
+        type: 3}
+      propertyPath: button
+      value: 
+      objectReference: {fileID: 165026603}
+    - target: {fileID: 8915435448447143468, guid: 44f9f87e4ce0a4a4d860bb32f2b08080,
+        type: 3}
+      propertyPath: iconSprite
+      value: 
+      objectReference: {fileID: 165026605}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44f9f87e4ce0a4a4d860bb32f2b08080, type: 3}
 --- !u!4 &19580010 stripped
@@ -644,6 +654,18 @@ Transform:
   m_Father: {fileID: 1630512290}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &165026603 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7737956013728005168, guid: 44f9f87e4ce0a4a4d860bb32f2b08080,
+    type: 3}
+  m_PrefabInstance: {fileID: 19580009}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &165026605 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 1162009584453360839, guid: 44f9f87e4ce0a4a4d860bb32f2b08080,
+    type: 3}
+  m_PrefabInstance: {fileID: 19580009}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &236347709
 GameObject:
   m_ObjectHideFlags: 0
@@ -6518,6 +6540,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2113862035}
   m_CullTransparentMesh: 0
+--- !u!1 &2139595541 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7737956013728005168, guid: 44f9f87e4ce0a4a4d860bb32f2b08080,
+    type: 3}
+  m_PrefabInstance: {fileID: 5558801428519187423}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &2139595543 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 1162009584453360839, guid: 44f9f87e4ce0a4a4d860bb32f2b08080,
+    type: 3}
+  m_PrefabInstance: {fileID: 5558801428519187423}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &940418194481231370
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6909,6 +6943,16 @@ PrefabInstance:
       propertyPath: playerInput
       value: 
       objectReference: {fileID: 1583179584}
+    - target: {fileID: 8915435448447143468, guid: 44f9f87e4ce0a4a4d860bb32f2b08080,
+        type: 3}
+      propertyPath: button
+      value: 
+      objectReference: {fileID: 2139595541}
+    - target: {fileID: 8915435448447143468, guid: 44f9f87e4ce0a4a4d860bb32f2b08080,
+        type: 3}
+      propertyPath: iconSprite
+      value: 
+      objectReference: {fileID: 2139595543}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44f9f87e4ce0a4a4d860bb32f2b08080, type: 3}
 --- !u!1001 &7245507777890272170
