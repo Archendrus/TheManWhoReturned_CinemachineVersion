@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Interactable
+  - InteractIcon
   layers:
   - Default
   - TransparentFX
@@ -58,4 +60,7 @@ TagManager:
     locked: 0
   - name: Snow
     uniqueID: 3484891221
+    locked: 0
+  - name: Icons
+    uniqueID: 3605911347
     locked: 0
