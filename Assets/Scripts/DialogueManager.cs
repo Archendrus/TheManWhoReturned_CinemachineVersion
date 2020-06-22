@@ -18,7 +18,6 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private Image advanceIcon;
     [SerializeField] private Sprite gamepadButtonSprite;
     [SerializeField] private Sprite keyboardButtonSprite;
-    [SerializeField] private AudioSource typeSound;
 
     public void OnEnable()
     {
@@ -85,11 +84,6 @@ public class DialogueManager : MonoBehaviour
         foreach (char ch in line)
         {
             dialogueText.text += ch;
-            if (ch != ' ')
-            {
-                typeSound.Play();
-            }
-            
             yield return new WaitForSeconds(typeSpeed);
         }
 
