@@ -6,20 +6,20 @@ using UnityEngine.InputSystem.Users;
 
 public class Interactable : MonoBehaviour
 {
-    [SerializeField] private GameObject button;
-    [SerializeField] private PlayerInput playerInput;
-    [SerializeField] private SpriteRenderer iconSprite;
-    [SerializeField] private Sprite gamepadButtonSprite;
-    [SerializeField] private Sprite keyboardButtonSprite;
+    [SerializeField] private GameObject button = null;
+    [SerializeField] private PlayerInput playerInput = null;
+    [SerializeField] private SpriteRenderer iconSprite = null;
+    [SerializeField] private Sprite gamepadButtonSprite = null;
+    [SerializeField] private Sprite keyboardButtonSprite = null;
 
     private bool triggered = false;
     private bool inRange = false;
 
     public Dialogue Dialogue;
 
-    public void OnEnable()
+    void OnEnable()
     {
-        // Set sprites to use for advance icon based on current input device
+        // Set sprites to use for interact icon based on current input device
         // Add listener to get device change events
         SetIconsForCurrentControlScheme(playerInput.currentControlScheme);
         InputUser.onChange += onInputDeviceChange;
@@ -45,7 +45,7 @@ public class Interactable : MonoBehaviour
         triggered = value;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
         // Show button sprite
         if (collision.CompareTag("Player"))
@@ -54,7 +54,7 @@ public class Interactable : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    void OnTriggerExit2D(Collider2D collision)
     {
         // Hide button sprite
         if (collision.CompareTag("Player"))
@@ -63,7 +63,7 @@ public class Interactable : MonoBehaviour
         }
     }
 
-    private void SetIconsForCurrentControlScheme(string scheme)
+    void SetIconsForCurrentControlScheme(string scheme)
     {
         switch (scheme)
         {
@@ -76,7 +76,7 @@ public class Interactable : MonoBehaviour
         }
     }
 
-    public void onInputDeviceChange(InputUser user, InputUserChange change, InputDevice device)
+    void onInputDeviceChange(InputUser user, InputUserChange change, InputDevice device)
     {
         // user changed devices, set new sprite for advance icon
         if (change == InputUserChange.ControlSchemeChanged)

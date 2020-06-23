@@ -5,9 +5,9 @@ using Cinemachine;
 
 public class EnterRoom : MonoBehaviour
 {
-    [SerializeField] private CinemachineVirtualCamera roomCamera;
+    [SerializeField] private CinemachineVirtualCamera roomCamera = null;
 
-    public void OnTriggerEnter2D(Collider2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Player")
         {
@@ -15,7 +15,7 @@ public class EnterRoom : MonoBehaviour
         }
     }
 
-    public void OnTriggerExit2D(Collider2D collision)
+    void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.tag == "Player")
         {

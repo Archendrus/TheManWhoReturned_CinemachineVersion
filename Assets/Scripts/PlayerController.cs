@@ -7,7 +7,7 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float speed = 5f;
-    [SerializeField] private Canvas canvas;
+    [SerializeField] private Canvas canvas = null;
 
     public Animator animator;
     public GameObject Interactable;
@@ -50,9 +50,9 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void FixedUpdate()
+    void FixedUpdate()
     {
-        // Allow move if no dialog
+        // Allow move if no dialog open
         if (!canvas.gameObject.activeInHierarchy)
         {
             Vector2 position = new Vector2(transform.position.x, transform.position.y);
@@ -60,17 +60,17 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void OnMove(InputAction.CallbackContext ctx)
+    void OnMove(InputAction.CallbackContext ctx)
     {
         moveDirection = ctx.ReadValue<Vector2>();
     }
 
-    public void OnQuit(InputAction.CallbackContext ctx)
+    void OnQuit(InputAction.CallbackContext ctx)
     {
         Application.Quit();
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
         // set GameObject interactable on collision
         if (collision.CompareTag("Interactable"))
@@ -79,7 +79,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    void OnTriggerExit2D(Collider2D collision)
     {
         // Clear GameObject interactable on exit collision
         if (collision.CompareTag("Interactable"))

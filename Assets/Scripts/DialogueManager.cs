@@ -10,38 +10,39 @@ public class DialogueManager : MonoBehaviour
 {
     private int currentLine;
 
-    [SerializeField] private TextMeshProUGUI dialogueText;
-    [SerializeField] private DialogueBox dialogueBox;
-    [SerializeField] private float typeSpeed;
-    [SerializeField] private PlayerController player;
-    [SerializeField] private PlayerInput playerInput;
-    [SerializeField] private Image advanceIcon;
-    [SerializeField] private Sprite gamepadButtonSprite;
-    [SerializeField] private Sprite keyboardButtonSprite;
-    [SerializeField] private AudioSource typeSound;
+    [SerializeField] private TextMeshProUGUI dialogueText  = null;
+    [SerializeField] private DialogueBox dialogueBox = null;
+    [SerializeField] private float typeSpeed = 0;
+    [SerializeField] private PlayerController player = null;
+    [SerializeField] private PlayerInput playerInput = null;
+    [SerializeField] private Image advanceIcon = null;
+    [SerializeField] private Sprite gamepadButtonSprite = null;
+    [SerializeField] private Sprite keyboardButtonSprite = null;
+    [SerializeField] private AudioSource typeSound = null;
 
-    public void OnEnable()
+    void OnEnable()
     {
-        // Set sprites to use for advance icon based on current input device
+        // Set sprites to use for dialogue advance icon based on current input device
         // Add listener to get device change events
         SetIconsForCurrentControlScheme(playerInput.currentControlScheme);
         InputUser.onChange += onInputDeviceChange;
     }
 
-    public void OnDisable()
+    void OnDisable()
     {
         InputUser.onChange -= onInputDeviceChange;
     }
 
-    public void OnInteract(InputAction.CallbackContext ctx)
+    void OnInteract(InputAction.CallbackContext ctx)
     {
         // Interact button press and player has something to interact with
         if (ctx.performed && player.Interactable != null)
         {
             List<Dialogue.Line> dialogueLines = player.Interactable.GetComponent<Interactable>().Dialogue.Lines;
 
-            // Canvas not on, show canvas, reset line position
-            // hide interactable icon
+            // Canvas not on
+            // reset line position, hide interactable icon, show canvas, 
+            // attach dialogue box to point defined 
             if (!transform.gameObject.activeInHierarchy)
             {
                 currentLine = 0;
@@ -75,7 +76,7 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    private IEnumerator TypeOneLine(string line)
+    IEnumerator TypeOneLine(string line)
     {
         // Hide advance icon, clear previous text
         advanceIcon.enabled = false;
@@ -97,7 +98,7 @@ public class DialogueManager : MonoBehaviour
         advanceIcon.enabled = true;
     }
 
-    public void onInputDeviceChange(InputUser user, InputUserChange change, InputDevice device)
+    void onInputDeviceChange(InputUser user, InputUserChange change, InputDevice device)
     {
         // user changed devices, set new sprite for advance icon
         if (change == InputUserChange.ControlSchemeChanged)
@@ -106,7 +107,7 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    private void SetIconsForCurrentControlScheme(string scheme)
+    void SetIconsForCurrentControlScheme(string scheme)
     {
         switch (scheme)
         {

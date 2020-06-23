@@ -5,10 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class SceneChange : MonoBehaviour
 {
-    [SerializeField] private string newLevel;
-    [SerializeField] private Animator transition;
+    [SerializeField] private string newLevel = "";
+    [SerializeField] private Animator transition = null;
 
-    private void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
         if(other.CompareTag("Player"))
         {
@@ -16,7 +16,7 @@ public class SceneChange : MonoBehaviour
         }
     }
 
-    private IEnumerator LoadScene()
+    IEnumerator LoadScene()
     {
         transition.SetTrigger("Start");
         yield return new WaitForSeconds(1);
