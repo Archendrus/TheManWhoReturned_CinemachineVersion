@@ -50,7 +50,7 @@ MonoBehaviour:
   iconSprite: {fileID: 1162009584453360839}
   gamepadButtonSprite: {fileID: 3815248754801610479, guid: 594f8efb4ebfb9b4693a404d3c66526f,
     type: 3}
-  keyboardButtonSprite: {fileID: 4466523897078045299, guid: 8e74ad407501fe94f8ddc10c2c407e60,
+  keyboardButtonSprite: {fileID: -4450558153152303826, guid: 7297916662bc2c64ab5c633833bde694,
     type: 3}
   Dialogue: {fileID: 0}
 --- !u!58 &3065505712771550455
