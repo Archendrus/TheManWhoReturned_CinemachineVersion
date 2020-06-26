@@ -81,7 +81,6 @@ public class Interactable : MonoBehaviour
         // user changed devices, set new sprite for advance icon
         if (change == InputUserChange.ControlSchemeChanged)
         {
-            Debug.Log(playerInput.currentControlScheme);
             SetIconsForCurrentControlScheme(playerInput.currentControlScheme);
         }
     }

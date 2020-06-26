@@ -19,6 +19,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private Sprite gamepadButtonSprite = null;
     [SerializeField] private Sprite keyboardButtonSprite = null;
     [SerializeField] private AudioSource typeSound = null;
+    private AudioClip clip = null;
 
     void OnEnable()
     {
@@ -26,6 +27,8 @@ public class DialogueManager : MonoBehaviour
         // Add listener to get device change events
         SetIconsForCurrentControlScheme(playerInput.currentControlScheme);
         InputUser.onChange += onInputDeviceChange;
+
+        clip = typeSound.clip;
     }
 
     void OnDisable()
@@ -88,7 +91,7 @@ public class DialogueManager : MonoBehaviour
             dialogueText.text += ch;
             if (ch != ' ')
             {
-                typeSound.Play();
+                typeSound.PlayOneShot(clip);
             }
             
             yield return new WaitForSeconds(typeSpeed);
