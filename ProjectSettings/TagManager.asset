@@ -70,6 +70,9 @@ TagManager:
   - name: Snow
     uniqueID: 3484891221
     locked: 0
+  - name: gy_fg
+    uniqueID: 1742957277
+    locked: 0
   - name: Icons
     uniqueID: 3605911347
     locked: 0
