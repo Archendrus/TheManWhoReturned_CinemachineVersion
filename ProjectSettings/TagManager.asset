@@ -43,6 +43,15 @@ TagManager:
   - name: Background
     uniqueID: 1620809465
     locked: 0
+  - name: gy_grass
+    uniqueID: 1164071581
+    locked: 0
+  - name: gy_tombstone_shad
+    uniqueID: 2545768263
+    locked: 0
+  - name: gy_tombstones
+    uniqueID: 4091240293
+    locked: 0
   - name: Street
     uniqueID: 4203037411
     locked: 0
