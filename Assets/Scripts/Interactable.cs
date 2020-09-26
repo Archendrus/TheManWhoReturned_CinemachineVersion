@@ -16,6 +16,7 @@ public class Interactable : MonoBehaviour
     private bool inRange = false;
 
     public Dialogue Dialogue;
+    public SceneChange sceneChange;
 
     void OnEnable()
     {
