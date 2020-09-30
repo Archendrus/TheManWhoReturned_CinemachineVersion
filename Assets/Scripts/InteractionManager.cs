@@ -36,54 +36,67 @@ public class InteractionManager : MonoBehaviour
         InputUser.onChange -= onInputDeviceChange;
     }
 
-    void OnInteract(InputAction.CallbackContext ctx)
+    public void OnInteract(InputAction.CallbackContext ctx)
     {
+        //Debug.Log("OnInteract");
         // Interact button press and player has something to interact with
         if (ctx.performed && player.Interactable != null)
         {
             Interactable interactable = player.Interactable.GetComponent<Interactable>();
-            if (interactable.sceneChange != null)
+            switch (interactable.Type)
             {
-                // do scene change
-            }
-            else
-            {
-                List<Dialogue.Line> dialogueLines = interactable.Dialogue.Lines;
+                case InteractableType.SceneChange:
+                    //interactable.SceneChange.LoadScene();
+                    break;
 
-                // Canvas not on
-                // reset line position, hide interactable icon, show canvas, 
-                // attach dialogue box to point defined 
-                if (!transform.gameObject.activeInHierarchy)
-                {
-                    currentLine = 0;
-                    player.Interactable.GetComponent<Interactable>().SetTriggered(true);
-                    transform.gameObject.SetActive(true);
+                case InteractableType.Dialogue:
+                    List<Dialogue.Line> dialogueLines = interactable.Dialogue.Lines;
 
-                    dialogueBox.SetDialoguePoint(dialogueLines[currentLine].CharacterDialoguePoint);
-
-                    StartCoroutine(TypeOneLine(dialogueLines[currentLine].Text));
-                }
-                // Canvas on, increment line position if more lines
-                else if (currentLine < dialogueLines.Count - 1)
-                {
-                    if (dialogueText.text == dialogueLines[currentLine].Text)
+                    // Canvas not on
+                    // reset line position, hide interactable icon, show canvas, 
+                    // attach dialogue box to point defined 
+                    if (!transform.gameObject.activeInHierarchy)
                     {
-                        currentLine++;
+                        currentLine = 0;
+                        player.Interactable.GetComponent<Interactable>().SetTriggered(true);
+                        transform.gameObject.SetActive(true);
+
                         dialogueBox.SetDialoguePoint(dialogueLines[currentLine].CharacterDialoguePoint);
+
                         StartCoroutine(TypeOneLine(dialogueLines[currentLine].Text));
                     }
-
-                }
-                else // Canvas on and no lines left, hide canvas, show interactable icon
-                {
-                    if (dialogueText.text == dialogueLines[currentLine].Text)
+                    // Canvas on, increment line position if more lines
+                    else if (currentLine < dialogueLines.Count - 1)
                     {
-                        dialogueText.text = "";
-                        player.Interactable.GetComponent<Interactable>().SetTriggered(false);
-                        transform.gameObject.SetActive(false);
+                        if (dialogueText.text == dialogueLines[currentLine].Text)
+                        {
+                            currentLine++;
+                            dialogueBox.SetDialoguePoint(dialogueLines[currentLine].CharacterDialoguePoint);
+                            StartCoroutine(TypeOneLine(dialogueLines[currentLine].Text));
+                        }
+
                     }
-                }
+                    else // Canvas on and no lines left, hide canvas, show interactable icon
+                    {
+                        if (dialogueText.text == dialogueLines[currentLine].Text)
+                        {
+                            dialogueText.text = "";
+                            player.Interactable.GetComponent<Interactable>().SetTriggered(false);
+                            transform.gameObject.SetActive(false);
+                        }
+                    }
+                    break;
+                    
             }
+            
+            //if (interactable.Type == InteractableType.SceneChange)
+            //{
+            //    // do scene change
+            //}
+            //else
+            //{
+
+            //}
         }
     }
 

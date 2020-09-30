@@ -4,6 +4,12 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Users;
 
+public enum InteractableType
+{
+    Dialogue,
+    SceneChange
+}
+
 public class Interactable : MonoBehaviour
 {
     [SerializeField] private GameObject button = null;
@@ -16,7 +22,9 @@ public class Interactable : MonoBehaviour
     private bool inRange = false;
 
     public Dialogue Dialogue;
-    public SceneChange sceneChange;
+    public SceneChange Scene;
+
+    public InteractableType Type;
 
     void OnEnable()
     {
@@ -24,6 +32,15 @@ public class Interactable : MonoBehaviour
         // Add listener to get device change events
         SetIconsForCurrentControlScheme(playerInput.currentControlScheme);
         InputUser.onChange += onInputDeviceChange;
+
+        if (Dialogue != null)
+        {
+            Type = InteractableType.Dialogue;
+        }
+        else
+        {
+            Type = InteractableType.SceneChange;
+        }
     }
 
     // Update is called once per frame

@@ -2012,7 +2012,7 @@ MonoBehaviour:
   sRenderer: {fileID: 0}
   UseParallaxOnXAxis: 1
   UseParallaxOnYAxis: 0
-  ParallaxSmoothingX: 1
+  ParallaxSmoothingX: 0.75
   ParallaxSmoothingY: 1
   ParallaxScalar: 0
   AutoTileX: 0

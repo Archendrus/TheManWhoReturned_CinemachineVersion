@@ -16,8 +16,10 @@ public class SceneChange : MonoBehaviour
         }
     }
 
-    IEnumerator LoadScene()
+    public IEnumerator LoadScene()
     {
+        Debug.Log("LoadScene");
+        Debug.Log(newLevel);
         transition.SetTrigger("Start");
         yield return new WaitForSeconds(1);
         SceneManager.LoadScene(newLevel);

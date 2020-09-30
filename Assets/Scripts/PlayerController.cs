@@ -60,12 +60,12 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void OnMove(InputAction.CallbackContext ctx)
+    public void OnMove(InputAction.CallbackContext ctx)
     {
         moveDirection = ctx.ReadValue<Vector2>();
     }
 
-    void OnQuit(InputAction.CallbackContext ctx)
+    public void OnQuit(InputAction.CallbackContext ctx)
     {
         Application.Quit();
     }
