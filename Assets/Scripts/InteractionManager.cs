@@ -38,15 +38,15 @@ public class InteractionManager : MonoBehaviour
 
     public void OnInteract(InputAction.CallbackContext ctx)
     {
-        //Debug.Log("OnInteract");
         // Interact button press and player has something to interact with
         if (ctx.performed && player.Interactable != null)
         {
+            // Get interactable object, run logic based on interactable type
             Interactable interactable = player.Interactable.GetComponent<Interactable>();
             switch (interactable.Type)
             {
                 case InteractableType.SceneChange:
-                    //interactable.SceneChange.LoadScene();
+                    interactable.Scene.Load();
                     break;
 
                 case InteractableType.Dialogue:
@@ -85,18 +85,8 @@ public class InteractionManager : MonoBehaviour
                             transform.gameObject.SetActive(false);
                         }
                     }
-                    break;
-                    
+                    break;       
             }
-            
-            //if (interactable.Type == InteractableType.SceneChange)
-            //{
-            //    // do scene change
-            //}
-            //else
-            //{
-
-            //}
         }
     }
 

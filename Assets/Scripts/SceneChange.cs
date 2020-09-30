@@ -16,10 +16,13 @@ public class SceneChange : MonoBehaviour
         }
     }
 
-    public IEnumerator LoadScene()
+    public void Load()
     {
-        Debug.Log("LoadScene");
-        Debug.Log(newLevel);
+        StartCoroutine(LoadScene());
+    }
+
+    IEnumerator LoadScene()
+    {
         transition.SetTrigger("Start");
         yield return new WaitForSeconds(1);
         SceneManager.LoadScene(newLevel);
